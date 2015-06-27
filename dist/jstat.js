@@ -1,4 +1,4 @@
-this.j$ = this.jStat = (function(Math, undefined) {
+var jStatVar = (function(Math, undefined) {
 
 // For quick reference.
 var concat = Array.prototype.concat;
@@ -924,7 +924,7 @@ var jProto = jStat.prototype;
   })(funcs[i]);
 })('quantiles percentileOfScore'.split(' '));
 
-}(this.jStat, Math));
+}(jStatVar, Math));
 // Special functions //
 (function(jStat, Math) {
 
@@ -1392,7 +1392,7 @@ jStat.randg = function randg(shape, n, m) {
   })(funcs[i]);
 })('randn'.split(' '));
 
-}(this.jStat, Math));
+}(jStatVar, Math));
 (function(jStat, Math) {
 
 // generate all distribution instance methods
@@ -2413,7 +2413,7 @@ jStat.extend(jStat.triangular, {
   }
 });
 
-}(this.jStat, Math));
+}(jStatVar, Math));
 /* Provides functions for the solution of linear system of equations, integration, extrapolation,
  * interpolation, eigenvalue problems, differential equations and PCA analysis. */
 
@@ -3197,7 +3197,7 @@ jStat.extend({
   }(funcs[i]));
 }('add divide multiply subtract dot pow exp log abs norm angle'.split(' ')));
 
-}(this.jStat, Math));
+}(jStatVar, Math));
 (function(jStat, Math) {
 
 var slice = [].slice;
@@ -3444,4 +3444,6 @@ jStat.extend(jStat.fn, {
   }
 });
 
-}(this.jStat, Math));
+}(jStatVar, Math));
+
+module.exports = jStatVar;
